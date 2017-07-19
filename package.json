@@ -20,12 +20,13 @@
     "test": "",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "build:pack": "babel src/components/react-smart-checkbox.js -o bin/index.js --presets=babili"
+    "build:pack": "mkdir -p bin;babel src/components/react-smart-checkbox.js -o bin/index.js --presets=babili"
   },
   "repository": "git@github.com:ShavidzeT/react-smart-checkbox.git",
   "keywords": [],
   "author": "Your name here",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.0.0",
     "babel-eslint": "^6.0.0",
     "babel-loader": "^6.0.0",
@@ -61,11 +62,11 @@
     "react-addons-test-utils": "^15.0.0",
     "react-hot-loader": "^1.2.9",
     "rimraf": "^2.4.3",
+    "semantic-release": "^6.3.6",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.0",
-    "webpack-dev-server": "^1.12.0",
-    "semantic-release": "^6.3.6"
+    "webpack-dev-server": "^1.12.0"
   },
   "dependencies": {
     "core-js": "^2.0.0",
