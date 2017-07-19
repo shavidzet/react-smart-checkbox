@@ -19,7 +19,8 @@
     "start": "node server.js --env=dev",
     "test": "",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "build:pack": "babel src/components/react-smart-checkbox.js -o bin/index.js --presets=babili"
   },
   "repository": "git@github.com:ShavidzeT/react-smart-checkbox.git",
   "keywords": [],
