@@ -2,16 +2,19 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-
-let yeomanImage = require('../images/yeoman.png');
+import ReactSmartCheckbox from './react-smart-checkbox'
 
 class AppComponent extends React.Component {
   render() {
     return (
-      <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator" />
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
-      </div>
+      <ReactSmartCheckbox
+        name='fruits'
+        options={['orange', 'apple', 'banana']}
+        initialValues={[]}
+        onChange={checked => {
+          console.log(checked)
+        }}
+      />
     );
   }
 }
