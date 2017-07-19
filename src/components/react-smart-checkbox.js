@@ -6,7 +6,9 @@ import _ from 'lodash'
 export default class extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    options: PropTypes.array.isRequired
+    options: PropTypes.array.isRequired,
+    initialValues: PropTypes.array,
+    onChange: PropTypes.func
   }
   constructor (props) {
     super(props)
@@ -18,7 +20,9 @@ export default class extends React.Component {
     }
   }
   componentDidMount () {
-    this.handleChildChange(this.props.initialValues)
+    if (this.props.initialValues) {
+      this.handleChildChange(this.props.initialValues)
+    }
   }
   handleFatherChange (e) {
     const children = (this.state.children.length === this.props.options.length)
@@ -38,7 +42,7 @@ export default class extends React.Component {
   }
   componentWillUpdate (nextProps, nextState) {
     const stateDiff = !_.isEqualWith(this.state, nextState)
-    if (stateDiff) {
+    if (stateDiff && this.props.onChange) {
       this.props.onChange(nextState.children)
     }
   }

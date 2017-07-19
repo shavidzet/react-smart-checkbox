@@ -10,10 +10,6 @@ class AppComponent extends React.Component {
       <ReactSmartCheckbox
         name='fruits'
         options={['orange', 'apple', 'banana']}
-        initialValues={[]}
-        onChange={checked => {
-          console.log(checked)
-        }}
       />
     );
   }
