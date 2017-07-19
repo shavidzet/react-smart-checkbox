@@ -1,6 +1,6 @@
 {
   "name": "react-smart-checkbox",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "files": [
     "bin/index.js"
   ],
@@ -18,9 +18,10 @@
     "serve:dist": "node server.js --env=dist",
     "start": "node server.js --env=dev",
     "test": "karma start",
-    "test:watch": "karma start --autoWatch=true --singleRun=false"
+    "test:watch": "karma start --autoWatch=true --singleRun=false",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "repository": "",
+  "repository": "git@github.com:ShavidzeT/react-smart-checkbox.git",
   "keywords": [],
   "author": "Your name here",
   "devDependencies": {
@@ -62,7 +63,8 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.0",
-    "webpack-dev-server": "^1.12.0"
+    "webpack-dev-server": "^1.12.0",
+    "semantic-release": "^6.3.6"
   },
   "dependencies": {
     "core-js": "^2.0.0",
