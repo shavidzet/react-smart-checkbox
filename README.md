@@ -1,4 +1,7 @@
 # react-smart-checkbox
+
+[![npm version](https://badge.fury.io/js/react-smart-checkbox.svg)](https://badge.fury.io/js/react-smart-checkbox)
+
 **Installation:**
 *  npm
 ```bash
