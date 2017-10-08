@@ -1,6 +1,6 @@
 {
   "name": "react-smart-checkbox",
-  "version": "0.0.0-development",
+  "version": "3.0.1",
   "files": [
     "bin/index.js"
   ],
